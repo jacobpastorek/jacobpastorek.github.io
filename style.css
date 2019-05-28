@@ -1,0 +1,42 @@
+body {
+  background: #222; }
+
+.top h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 0px;
+  padding-top: 50px; }
+  .top h1 span {
+    font-weight: 300; }
+
+.top p {
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  padding-top: 0px; }
+  .top p b {
+    color: darkslateblue; }
+
+.contents ul {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto; }
+  .contents ul li {
+    display: inline-block; }
+    .contents ul li a {
+      border-radius: 4px;
+      padding: 5px 10px;
+      display: inline-block;
+      min-width: 200px;
+      max-width: 200px;
+      text-decoration: none;
+      background: #111;
+      width: 100%;
+      color: white;
+      font-size: 13px;
+      font-weight: 500; }
+      .contents ul li a span {
+        font-weight: 200; }
+      .contents ul li a:hover {
+        background: #121212; }
