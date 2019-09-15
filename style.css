@@ -1,42 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap");
 body {
-  background: #222; }
+  margin: 0;
+  padding: 0; }
 
-.top h1 {
-  color: white;
-  font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 0px;
-  padding-top: 50px; }
-  .top h1 span {
-    font-weight: 300; }
+a {
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
 
-.top p {
-  color: white;
-  font-weight: 500;
-  font-size: 12px;
-  padding-top: 0px; }
-  .top p b {
-    color: darkslateblue; }
+.right-side {
+  background: #1f1e1e;
+  min-height: 800px;
+  height: 100vh;
+  padding-top: 30px; }
+  .right-side .circle {
+    position: absolute;
+    top: 10px;
+    width: 12px;
+    border-radius: 12px;
+    height: 12px; }
+    .right-side .circle.r {
+      left: 15px;
+      background: #ed655a; }
+    .right-side .circle.y {
+      left: 35px;
+      background: #e1c04c; }
+    .right-side .circle.g {
+      left: 55px;
+      background: #72be47; }
 
-.contents ul {
+.left-side {
+  min-height: 800px;
+  height: 100vh; }
+  .left-side .info-wrap {
+    display: none;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 99; }
+    .left-side .info-wrap p {
+      max-width: 360px;
+      padding: 0 10px;
+      position: absolute;
+      font-size: 30px;
+      letter-spacing: 2px;
+      top: 50%;
+      font-family: "Shadows Into Light", cursive;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .left-side .info-wrap.active {
+      display: block; }
+  .left-side #info-trigger,
+  .left-side #info-closer {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .left-side #info-trigger:hover,
+    .left-side #info-closer:hover {
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      opacity: 0.5; }
+    .left-side #info-trigger img,
+    .left-side #info-closer img {
+      width: 25px; }
+
+.top {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .top.active {
+    -webkit-filter: blur(10px);
+    filter: blur(10px); }
+  .top .img-wrap {
+    width: 200px;
+    margin: 0 auto;
+    height: 200px;
+    border-radius: 300px;
+    -webkit-box-shadow: 0px 0px 0px 2px #222;
+    box-shadow: 0px 0px 0px 2px #222;
+    overflow: hidden; }
+    .top .img-wrap img {
+      max-width: 100%; }
+  .top a img {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  .top a:hover img {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  .top h1 {
+    color: #222;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 0px; }
+    .top h1 span {
+      font-weight: 300; }
+  .top a {
+    display: inline-block;
+    margin: 10px; }
+  .top p {
+    color: #222;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 0px; }
+    .top p b {
+      color: darkslateblue; }
+
+.project {
+  position: relative;
+  padding: 10px 20px;
   width: 100%;
-  padding: 0;
-  margin: 0 auto; }
-  .contents ul li {
-    display: inline-block; }
-    .contents ul li a {
-      border-radius: 4px;
-      padding: 5px 10px;
-      display: inline-block;
-      min-width: 200px;
-      max-width: 200px;
-      text-decoration: none;
-      background: #111;
-      width: 100%;
-      color: white;
-      font-size: 13px;
-      font-weight: 500; }
-      .contents ul li a span {
-        font-weight: 200; }
-      .contents ul li a:hover {
-        background: #121212; }
+  display: block; }
+  .project:before {
+    content: "/$~";
+    position: absolute;
+    left: -5px;
+    top: 25px;
+    font-size: 10px;
+    color: white; }
+  .project:hover {
+    opacity: 0.4; }
+  .project .desc {
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+    opacity: 0.5; }
+  .project h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold; }

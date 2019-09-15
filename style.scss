@@ -1,60 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap");
+
 body {
-    background: #222;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  transition: all.2s;
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    transition: all.2s;
+  }
+}
+.right-side {
+  background: rgb(31, 30, 30);
+  min-height: 800px;
+  height: 100vh;
+  padding-top: 30px;
+
+  .circle {
+    position: absolute;
+    top: 10px;
+    width: 12px;
+    border-radius: 12px;
+    height: 12px;
+    &.r {
+      left: 15px;
+      background: rgb(237, 101, 90);
+    }
+    &.y {
+      left: 35px;
+      background: rgb(225, 192, 76);
+    }
+    &.g {
+      left: 55px;
+      background: rgb(114, 190, 71);
+    }
+  }
+}
+
+.left-side {
+  min-height: 800px;
+  height: 100vh;
+
+  .info-wrap {
+    display: none;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 99;
+    p {
+      max-width: 360px;
+      padding: 0 10px;
+      position: absolute;
+      font-size: 30px;
+      letter-spacing: 2px;
+      top: 50%;
+      font-family: "Shadows Into Light", cursive;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.active {
+      display: block;
+    }
+  }
+
+  #info-trigger,
+  #info-closer {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      transition: all 0.2s;
+      opacity: 0.5;
+    }
+    img {
+      width: 25px;
+    }
+  }
 }
 
 .top {
-    h1 {
-        color: white;
-        font-weight: 500;
-        font-size: 20px;
-        margin-bottom: 0px;
-        padding-top: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  &.active {
+    filter: blur(10px);
+  }
+  .img-wrap {
+    width: 200px;
+    margin: 0 auto;
+    height: 200px;
+    border-radius: 300px;
+    box-shadow: 0px 0px 0px 2px #222;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
 
-        span {
-            font-weight: 300;
-        }
+  a {
+    img {
+      transition: all 0.2s;
     }
 
-    p {
-        color: white;
-        font-weight: 500;
-        font-size: 12px;
-        padding-top: 0px;
-
-        b {
-            color: darkslateblue;
-        }
+    &:hover {
+      img {
+        transform: translateY(-2px);
+        transition: all 0.2s;
+      }
     }
+  }
+  h1 {
+    color: #222;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 0px;
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  p {
+    color: #222;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 0px;
+
+    b {
+      color: darkslateblue;
+    }
+  }
 }
 
-.contents {
-    ul {
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
-
-        li {
-            display: inline-block;
-
-            a {
-                border-radius: 4px;
-                padding: 5px 10px;
-                display: inline-block;
-                min-width: 200px;
-                max-width: 200px;
-                text-decoration: none;
-                background:#111;
-                width: 100%;
-                color: white;
-                font-size: 13px;
-                font-weight: 500;
-                span{
-                    font-weight: 200;
-                }
-                &:hover{
-                    background:#121212;
-                }
-            }
-        }
-    }
+.project {
+  position: relative;
+  padding: 10px 20px;
+  width: 100%;
+  display: block;
+  &:before {
+    content: "/$~";
+    position: absolute;
+    left: -5px;
+    top: 25px;
+    font-size: 10px;
+    color: white;
+  }
+  &:hover {
+    opacity: 0.4;
+  }
+  .desc {
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+    opacity: 0.5;
+  }
+  h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
