@@ -22,6 +22,12 @@ a {
   height: 100vh;
   padding-top: 30px;
 
+  @media (max-width: 768px) {
+    height: auto;
+    padding-bottom: 30px;
+    min-height: auto;
+  }
+
   .circle {
     position: absolute;
     top: 10px;
@@ -47,6 +53,11 @@ a {
   min-height: 800px;
   height: 100vh;
 
+  @media (max-width: 768px) {
+    min-height: 650px;
+    height: auto;
+  }
+
   .info-wrap {
     display: none;
     position: absolute;
@@ -67,6 +78,11 @@ a {
       font-family: "Shadows Into Light", cursive;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+        width: 65%;
+      }
     }
     &.active {
       display: block;
@@ -95,6 +111,9 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 768px) {
+    top: 53%;
+  }
   &.active {
     filter: blur(10px);
   }
