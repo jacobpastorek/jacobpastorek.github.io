@@ -100,15 +100,23 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 100%;
+  padding: 50px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
   @media (max-width: 768px) {
     .top {
       top: 53%; } }
   .top.active {
     -webkit-filter: blur(10px);
-    filter: blur(10px); }
+    filter: blur(10px);
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
   .top .img-wrap {
     width: 200px;
     margin: 0 auto;

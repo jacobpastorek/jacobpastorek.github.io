@@ -110,12 +110,16 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 100%;
+  padding: 50px;
   transform: translate(-50%, -50%);
+  transition: all.2s;
   @media (max-width: 768px) {
     top: 53%;
   }
   &.active {
     filter: blur(10px);
+    transition: all.2s;
   }
   .img-wrap {
     width: 200px;
