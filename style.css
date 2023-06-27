@@ -19,31 +19,6 @@ a {
     -o-transition: all 0.2s;
     transition: all 0.2s; }
 
-.right-side {
-  background: #1f1e1e;
-  min-height: 800px;
-  height: 100vh;
-  padding-top: 30px; }
-  @media (max-width: 768px) {
-    .right-side {
-      height: auto;
-      padding-bottom: 30px;
-      min-height: auto; } }
-  .right-side .circle {
-    position: absolute;
-    top: 10px;
-    width: 12px;
-    border-radius: 12px;
-    height: 12px; }
-    .right-side .circle.r {
-      left: 15px;
-      background: #ed655a; }
-    .right-side .circle.y {
-      left: 35px;
-      background: #e1c04c; }
-    .right-side .circle.g {
-      left: 55px;
-      background: #72be47; }
 
 .left-side {
   min-height: 800px;
